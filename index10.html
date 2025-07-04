@@ -11,29 +11,72 @@
       font-family: 'Lato-Italic';
       src: url('fonts/Lato-Italic.ttf') format('truetype');
     }
+    @font-face {
+      font-family: 'EthnocentricRg';
+      src: url('fonts/EthnocentricRg.otf') format('truetype');
+    }
     body, html { margin: 0; padding: 0; height: 100%; background: #000; }
-    .crg-title { color: #fff; font-family: 'Lato-Italic', sans-serif; margin-bottom: 1rem; }
-    .crg-text { color: #fff; font-family: sans-serif; font-size: 1.25rem; margin-bottom: .5rem; }
+    .crg-title { color: #fff; font-family: 'Lato-Italic', sans-serif; margin-bottom: 2rem; margin-top: 1rem;  padding: .75rem 1.5rem;}
+    .crg-text { color: #fff; font-family: sans-serif; font-size: 200%; margin-bottom: 1.5rem; margin-top: 2.9rem; }
     .btn-crg {
       padding: .75rem 1.5rem; border: 2px solid #fff; background: transparent; color: #fff;
       font-family: sans-serif;
+      
+      
     }
     .btn-crg:hover { background: #fff; color: #000; }
-    .video-container video {
-      width: 100%; height: auto; object-fit: contain;
+    .video-container video { width: 100%; height: auto; object-fit: contain; }
+
+    /* Indentaciones responsivas en text-block */
+    .text-block p:nth-of-type(1) { margin-left: 15%; }
+    .text-block p:nth-of-type(2) { margin-left: 25%; }
+    .text-block p:nth-of-type(3) { margin-left: 35%; }
+    #footer-titles {
+      font-family: 'EthnocentricRg';
+      text-align: center;
+      margin-bottom: 15%;
     }
+    #Footer-Text{
+        text-align: center;
+    }
+    #Footer-Images {
+      width: 50%;
+      height: auto;
+      margin-bottom: 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    #contacto {
+      background-color: #000;
+      padding-top: 5rem;
+    }
+     body {
+    transition: opacity 2s ease;
+    opacity: 1;
+  }
+  body.fade-out {
+    opacity: 0;
+  }
+  a.btn-crg {
+  cursor: pointer !important;
+}
   </style>
 </head>
 <body>
-  <div class="container-fluid h-100 d-flex align-items-start">
+  <div class="container-fluid d-flex align-items-start">
     <div class="row w-100">
       <!-- Texto: left on lg+, full width on smaller -->
       <div class="col-12 col-lg-6 d-flex flex-column justify-content-center px-3 px-lg-5 order-2 order-lg-1">
-        <h1 class="crg-title">Comprometidos con el Desarrollo</h1>
-        <p class="crg-text">· Inversión</p>
-        <p class="crg-text">· Formación</p>
-        <p class="crg-text">· Información</p>
-        <a href="index.html" class="btn-crg mt-3 align-self-start">START</a>
+        <div class="text-block" >
+          <h1 class="crg-title">Comprometidos con el Desarrollo</h1>
+          <p class="crg-text">· Inversión</p>
+          <p class="crg-text">· Formación</p>
+          <p class="crg-text">· Información</p>
+          
+        </div>
+        <div class="btn d-flex justify-content-center justify-content-lg-center">
+            <a class="btn-crg mt-3 align-self-start" >START</a>
+        </div>
       </div>
       <!-- Video: right on lg+, top on smaller -->
       <div class="col-12 col-lg-6 d-flex justify-content-center align-items-start px-0 order-1 order-lg-2 pt-4 pt-lg-0">
@@ -46,7 +89,46 @@
       </div>
     </div>
   </div>
+
+  <footer id="contacto" class="footer text-white normalFont">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3" id="Footer-Text">
+          <img src="img/CRG_membrete_white_shadows.png" alt="CRG_Footer_Membrete_White" id="Footer-Images" >
+          <img src="img/Plataforma_integral.png" alt="CRG_Footer_Membrete_White" id="Footer-Images" >
+        </div>
+        <div  class="col-md-3" id="Footer-Text">
+          <h6 id="footer-titles">Servicios</h6>
+          <p>CENFI</p>
+          <p>Integral News</p>
+        </div>
+        <div class="col-md-3">
+          <h6 id="footer-titles">Contacto</h6>
+          <p id="Footer-Text">info@example.com<br>+52 123 456 7890</p>
+        </div>
+        <div class="col-md-3">
+            <h6 id="footer-titles" >Siguenos</h6>
+            <div style="text-align: center;" id="Footer-Text">
+                <img src="img/facebook.png" alt="FacebookLogo" style="width: 3rem; " class="mb-3">
+                <img src="img/instagram.png" alt="InstagramLogo" style="width: 3rem;" class="mb-3">
+                <img src="img/twitter.png" alt="TwitterLogo" style="width: 3rem;" class="mb-3">
+                <img src="img/linkedin.png" alt="LinkedinLogo" style="width: 3rem;" class="mb-3">
+            </div>
+            
+          </div>
+      </div>
+    </div>
+  </footer>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fade out effect when clikking the button
+    document.querySelector('.btn-crg').addEventListener('click', function() {
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1000); // Espera 2 segundos para redirigir
+        });
+    </script>
 </body>
 </html>

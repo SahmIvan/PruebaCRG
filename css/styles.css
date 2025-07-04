@@ -7,7 +7,15 @@
     font-family: 'Markazi Text';
     src: url('../fonts/MarkaziText-VariableFont_wght.ttf') format('truetype');
   }
-  
+  /* Aplícalo lo primero para que el navegador nunca pinte blanco */
+  html { background: #000; }
+  body {
+    margin: 0; padding: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background: transparent; /* ya defines el negro en html */
+  }
+  body.fade-in { opacity: 1; }
   .bodyFont{
     font-family: 'Markazi Text', serif;
     color: #333;
