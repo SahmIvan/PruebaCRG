@@ -1,0 +1,14 @@
+
+.navbar {
+  background-color: #000;
+  /* center nav bar text on bootstrap */
+  
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107;
+}

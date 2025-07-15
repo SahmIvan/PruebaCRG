@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Demo Vídeo con Logo Máscara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin: 0; background: #000; }
+    .bg-video {
+      position: fixed; inset: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover; z-index: -1;
+    }
+    .overlay {
+      position: fixed; inset: 0;
+     
+      display: flex; padding: 0 5%;
+      align-items: center; justify-content: space-between;
+      transition: opacity 1s ease; z-index: 10;
+    }
+    .overlay.fade-out { opacity: 0; }
+    .overlay .left {
+      max-width: 40%; color: #fff; font-family: sans-serif;
+      padding-left: 5%;
+    }
+    .overlay .btn {
+      display: inline-block; margin-top: 1em;
+      padding: 0.75em 1.5em; border: 2px solid #fff;
+      cursor: pointer; transition: background 0.3s, color 0.3s;
+    }
+    .overlay .btn:hover { background: #fff; color: #000; }
+
+    .overlay .right {
+      position: relative;
+      width: 40%; /* se mantiene porcentaje */
+      aspect-ratio: 1; /* caja cuadrada */
+      overflow: hidden;
+    }
+    /* Video dentro de la caja derecha */
+    .overlay .right .video-mask {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      z-index: 1;
+    }
+    /* Logo encima del video */
+    .overlay .right .logo {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-25%, -50%);
+      width: 70%; /* ajustable al tamaño del logo */
+      height: auto;
+      z-index: 2;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Vídeos asignados en JS según dispositivo -->
+  <video class="bg-video" muted playsinline autoplay loop></video>
+  <div class="overlay">
+    <div class="left">
+      <h1>Bienvenido</h1>
+      <p>Pulsa START para comenzar</p>
+      <div class="btn">START</div>
+    </div>
+    <div class="right">
+      <video class="video-mask" muted playsinline autoplay loop></video>
+      <!-- Logo en PNG o SVG para que siempre se vea -->
+      <img class="logo" src="./img/CRG_Azul_Nombre.png" alt="Logo CRG">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const bgVid   = document.querySelector('.bg-video');
+      const maskVid = document.querySelector('.video-mask');
+      const overlay = document.querySelector('.overlay');
+      const btn     = document.querySelector('.btn');
+
+      // Rutas de vídeos desktop vs mobile
+      const VIDEOS = {
+        desktop: { bg: './img/VIDEO_PORTADA.mp4', mask: './img/logo-loop-desktop.mp4' },
+        mobile:  { bg: './img/VideoMovil.mp4',    mask: './img/logo-loop-mobile.mp4' }
+      };
+      const isMobile = window.matchMedia('(max-width:768px)').matches;
+      const { bg, mask } = isMobile ? VIDEOS.mobile : VIDEOS.desktop;
+
+      bgVid.src   = bg;
+      maskVid.src = mask;
+      bgVid.load();
+      maskVid.load();
+
+      btn.addEventListener('click', ()=>{
+        overlay.classList.add('fade-out');
+        setTimeout(()=> location.href = 'index.html', 1000);
+      });
+    });
+  </script>
+</body>
