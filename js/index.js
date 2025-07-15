@@ -6,7 +6,9 @@
         }, 1000); // Espera 2 segundos para redirigir
     });
 
-// Fade-in effect for the landing page
-    document.addEventListener('DOMContentLoaded', function() {
-        document.body.classList.add('fade-in');
-    });
+// (2) Listener para cuando la página vuelve de la cache (o se carga)
+window.addEventListener('pageshow', function(event) {
+  // Siempre quitamos fade-out y forzamos fade-in
+  document.body.classList.remove('fade-out');
+  document.body.classList.add('fade-in');
+});

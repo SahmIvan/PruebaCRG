@@ -136,7 +136,7 @@ header.video-hero .brand-overlay .brand-text {
 
 .crg-nuestrogrupo p{
   font-family: 'DMSans-Italic', sans-serif;
-  font-size: 1.5rem;
+  font-size: 150%;
   margin-top: 1rem;
   margin-bottom: 1rem;
   /* line-height: 1.5; */
@@ -147,9 +147,11 @@ header.video-hero .brand-overlay .brand-text {
 }
 .crg-quienessomos p{
   font-family: 'DMSans-Italic', sans-serif;
-  font-size: 1.5rem;
+  font-size: 150%;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  margin-left: 5%;
+  margin-right: 5%;
   /* line-height: 1.5; */
 }
 
