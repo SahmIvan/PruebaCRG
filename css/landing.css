@@ -156,7 +156,7 @@ header.video-hero .brand-overlay .brand-text {
 }
 
 .crg-quienessomos {
-  background-image: url('assets/img/Polygon_Background1.png');
+  background-image: url('./assets/img/Polygon_Background1.png');
                  background-size: cover;
                  background-repeat: no-repeat;
                  background-position: center;
