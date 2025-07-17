@@ -2,75 +2,88 @@
   font-family: 'Lato-Italic';
   src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'EthnocentricRg';
   src: url('../assets/fonts/EthnocentricRg.otf') format('truetype');
 }
+
 @font-face {
   font-family: 'DMSans-Italic';
   src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'EssonnesTest-TextRegular';
   src: url('../assets/fonts/EssonnesTest-TextRegular.otf') format('truetype');
 }
 
-body, html { 
-  
-  height: 100%; 
-  background: #000; 
+body,
+html {
+
+  height: 100%;
+  background: #000;
 }
+
 /* crg-> Prefijo para identificar estilos propios de Casa Robles Group y evitar colisiones con los de Bootstrap */
-.crg-title { 
-  color: #fff; 
-  font-family: 'EssonnesTest-TextRegular', 
-  sans-serif; 
-  margin-bottom: 2rem; 
-  margin-top: 1rem;  
+.crg-title {
+  color: #fff;
+  font-family: 'EssonnesTest-TextRegular',
+    sans-serif;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
   padding: .75rem 1.5rem;
 }
 
-.crg-text { 
-  color: #fff; 
-  font-family: 'Lato-Italic'; 
-  font-size: 200%; 
-  margin-bottom: 1.5rem; 
-  margin-top: 2.9rem; 
+.crg-text {
+  color: #fff;
+  font-family: 'Lato-Italic';
+  font-size: 200%;
+  margin-bottom: 1.5rem;
+  margin-top: 2.9rem;
 }
 
 .btn-crg {
-  padding: .75rem 1.5rem; 
-  border: 2px solid #fff; 
-  background: transparent; 
+  padding: .75rem 1.5rem;
+  border: 2px solid #fff;
+  background: transparent;
   color: #fff;
   font-family: sans-serif;
 }
 
-.btn-crg:hover { 
-  background: #fff; 
-  color: #000; 
+.btn-crg:hover {
+  background: #fff;
+  color: #000;
 }
 
-.video-container video { 
-  width: 100%; 
-  height: auto; 
-  object-fit: contain; 
+.video-container video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Indentaciones responsivas en text-block */
-.text-block p:nth-of-type(1) { margin-left: 15%; }
-.text-block p:nth-of-type(2) { margin-left: 25%; }
-.text-block p:nth-of-type(3) { margin-left: 35%; }
+.text-block p:nth-of-type(1) {
+  margin-left: 15%;
+}
+
+.text-block p:nth-of-type(2) {
+  margin-left: 25%;
+}
+
+.text-block p:nth-of-type(3) {
+  margin-left: 35%;
+}
 
 body {
-transition: opacity 2s ease;
-opacity: 1;
+  transition: opacity 2s ease;
+  opacity: 1;
 }
 
 body.fade-out {
-opacity: 0;
+  opacity: 0;
 }
 
 a.btn-crg {
-cursor: pointer !important;
+  cursor: pointer !important;
 }

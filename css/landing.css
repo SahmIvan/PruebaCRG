@@ -20,18 +20,19 @@
 
 h1 {
   font-family: 'EthnocentricRg', sans-serif;
-  text-shadow: 5px -4px 10px rgba(7, 22, 49, 0.6);
+  text-shadow: 5px -4px 10px rgba(40, 57, 90, 0.6);
   padding-top: 4rem;
   padding-bottom: 1rem;
   font-style: italic;
   font-size: 200%;
 }
+
 h2 {
   font-family: 'Lato-Italic', sans-serif;
   font-weight: bolder;
   font-size: 2rem;
   padding-top: 2rem;
-  
+
 }
 
 /* Fade‑in inicial */
@@ -51,7 +52,9 @@ body {
 body.fade-in {
   opacity: 1;
 }
-
+body {
+  background-color:  #f8f9fa;
+}
 /* HERO SECTION */
 /* Hero vídeo full‑screen */
 header.video-hero {
@@ -60,6 +63,7 @@ header.video-hero {
   height: 100vh;
   overflow: hidden
 }
+
 /* Contenedor del vídeo */
 header.video-hero video {
   position: absolute;
@@ -71,7 +75,6 @@ header.video-hero video {
   transform: translate(-50%, -50%);
   z-index: 1;
   display: block
-  
 }
 
 /* Bloque logo + texto */
@@ -80,7 +83,7 @@ header.video-hero .brand-overlay {
   top: 4rem;
   left: 2.5rem;
   z-index: 2;
-  width:50%; 
+  width: 50%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -90,13 +93,13 @@ header.video-hero .brand-overlay {
 
 
 header.video-hero .brand-overlay img {
-  width:50%; 
+  width: 50%;
   height: auto;
   display: block;
 }
 
 header.video-hero .brand-overlay .brand-text {
-  
+
   margin-left: 25%;
   color: #fff;
   font-family: 'EssonnesTest-TextRegular', sans-serif;
@@ -110,8 +113,9 @@ header.video-hero .brand-overlay .brand-text {
 /* Ajustes móviles */
 @media (max-width: 915px) {
   header.video-hero .brand-overlay {
-    width: 100%; 
-    top: 5%; left: 5%;
+    width: 100%;
+    top: 5%;
+    left: 5%;
   }
 
   header.video-hero .brand-overlay .brand-text {
@@ -128,14 +132,14 @@ header.video-hero .brand-overlay .brand-text {
   margin-bottom: 1%;
 }
 
-.crg-nuestrogrupo-img img{
-  width:  auto;
+.crg-nuestrogrupo-img img {
+  width: auto;
   height: clamp(150px, 12vw, 350px);
   margin-top: 4%;
   margin-bottom: 1%;
 }
 
-.crg-nuestrogrupo p{
+.crg-nuestrogrupo p {
   font-family: 'DMSans-Italic', sans-serif;
   font-size: 150%;
   margin-top: 1rem;
@@ -143,10 +147,11 @@ header.video-hero .brand-overlay .brand-text {
   /* line-height: 1.5; */
 }
 
-.crg-quienessomos h1{
+.crg-quienessomos h1 {
   padding-top: 7rem;
 }
-.crg-quienessomos p{
+
+.crg-quienessomos p {
   font-family: 'DMSans-Italic', sans-serif;
   font-size: 150%;
   margin-top: 3rem;
@@ -157,8 +162,8 @@ header.video-hero .brand-overlay .brand-text {
 }
 
 .crg-quienessomos {
-  background-image: url('./assets/img/Polygon_Background1.png');
-                 background-size: cover;
-                 background-repeat: no-repeat;
-                 background-position: center;
+  background-image: url('../assets/img/Polygon_Background1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

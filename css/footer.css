@@ -1,42 +1,50 @@
 @font-face {
-      font-family: 'Lato-Italic';
-      src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'EthnocentricRg';
-      src: url('../assets/fonts/EthnocentricRg.otf') format('truetype');
-    }
-    @font-face {
-      font-family: 'DMSans-Italic';
-      src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'EssonnesTest-TextRegular';
-      src: url('../assets/fonts/EssonnesTest-TextRegular.otf') format('truetype');
-    }
-    #contacto {
-      background-color: #000;
-      margin-top: 5%;
-    }
-    #footer-titles {
-      font-family: 'EthnocentricRg', sans-serif;
-      text-align: center;
-      margin-top: 15%;
-      margin-bottom: 5%;
-    }
-    #Footer-Text{
-        text-align: center;
-        font-family: 'EssonnesTest-TextRegular', sans-serif;
-    }
-    #Footer-Images {
-      width: 100%;
-      height: auto;
-      margin-top: 15%;
-      margin-bottom: 5%;
-      padding-right: 10%;
-      padding-left: 10%;
-    }
-    #Footer-Text-Number {
-        text-align: center;
-        font-family: 'DMSans-Italic', sans-serif;
-    }
+  font-family: 'Lato-Italic';
+  src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EthnocentricRg';
+  src: url('../assets/fonts/EthnocentricRg.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DMSans-Italic';
+  src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EssonnesTest-TextRegular';
+  src: url('../assets/fonts/EssonnesTest-TextRegular.otf') format('truetype');
+}
+
+#contacto {
+  background-color: #000;
+  margin-top: 5%;
+}
+
+#footer-titles {
+  font-family: 'EthnocentricRg', sans-serif;
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+#Footer-Text {
+  text-align: center;
+  font-family: 'EssonnesTest-TextRegular', sans-serif;
+}
+
+#Footer-Images {
+  width: 100%;
+  height: auto;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+#Footer-Text-Number {
+  text-align: center;
+  font-family: 'DMSans-Italic', sans-serif;
+}
