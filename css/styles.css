@@ -49,18 +49,34 @@ h2 {
 }
 
 .crg-nosotros-row {
-  padding-top: 5%;
+  margin: 5%;
+  background-color: rgba(14,39,69, 0.03);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 15px;
+  
+  
 }
-
-.crg-nosotros h1 {
-  margin-bottom: 3rem;
+.crg-nosotros-row2 {
+  margin: 5%;
+  background-color: rgba(14,39,69, 0.03);
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 15px;
+  
+  
 }
+/* .crg-nosotros h1 {
+  margin-bottom: 1rem;
+} */
 
 .crg-nosotros .crg-img-text {
   height: auto;
   width: 80%;
   border-radius: 5%;
-  box-shadow: 10px 5px 10px rgba(7, 22, 49, 0.6);
+  box-shadow: 
+    8px 5px 5px rgba(0,0,0,0.08),
+    -4px -4px 6px rgba(255,255,255,0.8);
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 5%;
@@ -76,8 +92,17 @@ h2 {
   margin-right: 5%;
   text-align: justify;
   color: #4a4a4a;
+  border-left: 4px solid rgba(49, 64, 83, 0.1); /* alpha = 0.3 */
+  padding-left: 1rem;
 }
 
+.underline-nosotros {
+  width: 50%;
+  height: 0.2%;
+  background: #D3D3D3;
+  border-radius: 2px;
+  
+}
 
 /* SERVICIOS */
 
@@ -92,14 +117,21 @@ h2 {
   padding-top: 2%;
 }
 
-.crg-servicios h1 {
+/* .crg-servicios h1 {
   margin-bottom: 3rem;
-}
+} */
 
+.underline-servicios {
+  width: 50%;
+  height: 0.15%;
+  background: #D3D3D3;
+  border-radius: 2px;
+  
+}
 .crg-servicios .crg-servicios-logos {
   width: clamp(300px, 25vw, 500px);
   height: auto;
-  margin-top: 3%;
+  margin-top: 8%;
 
 }
 
@@ -107,7 +139,9 @@ h2 {
   height: auto;
   width: 80%;
   border-radius: 5%;
-  box-shadow: 10px 5px 10px rgba(7, 22, 49, 0.6);
+  box-shadow: 
+    8px 5px 5px rgba(0,0,0,0.08),
+    -4px -4px 6px rgba(255,255,255,0.8);
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 5%;
@@ -206,8 +240,11 @@ h2 {
   justify-content: center;
 }
 
+
+
 .crg-inverpro-row {
   padding-top: 2%;
+  
 }
 
 .crg-inverpro h1 {
@@ -225,7 +262,9 @@ h2 {
   height: auto;
   width: 80%;
   border-radius: 5%;
-  box-shadow: 10px 5px 10px rgba(7, 22, 49, 0.6);
+  box-shadow: 
+    8px 5px 5px rgba(0,0,0,0.08),
+    -4px -4px 6px rgba(255,255,255,0.8);
   margin-top: 5rem;
   margin-bottom: 1rem;
   margin-left: 5%;
@@ -241,6 +280,8 @@ h2 {
   margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
+  border-left: 4px solid rgba(14,39,69,0.3);
+  padding-left: 1rem;
 }
 
 
