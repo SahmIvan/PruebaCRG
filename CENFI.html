@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Robles Group</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <style>
+        @font-face {
+            font-family: 'EssonnesTest-TextRegular';
+            src: url('../assets/fonts/EssonnesTest-TextRegular.otf') format('truetype');
+        }
+
+
+        h5,
+        p {
+            font-family: 'EssonnesTest-TextRegular', sans-serif;
+            text-shadow: 5px -4px 10px rgba(40, 57, 90, 0.6);
+        }
+
+        /* Reinicios */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        /* Layout de filas */
+        .sections {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .section {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Imagen intacta */
+        .section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .section:hover img {
+            transform: scale(1.1);
+            filter: grayscale(100%);
+        }
+
+        /* Overlay (mitad de ancho, 100% alto) */
+        .section .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            transition: transform 0.4s ease;
+            z-index: 2;
+        }
+
+        /* Texto y botón */
+        .overlay .text-block {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            padding-top: 3%;
+        }
+
+        .overlay .text-block p {
+            font-size: 1rem;
+            line-height: 1;
+            text-align: center;
+            padding-bottom: 1rem;
+
+        }
+
+        .overlay .text-block h5 {
+            font-size: 1.2rem;
+            line-height: 1;
+            text-align: center;
+            padding-top: 0.5rem;
+
+
+        }
+
+        .overlay button {
+            padding: 0.6em 1em;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: background .3s, color .3s;
+        }
+
+        .overlay button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Punto de partida */
+        .left-overlay {
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .right-overlay {
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        /* Al hacer hover sobre la sección */
+        .section:hover .left-overlay {
+            transform: translateX(100%);
+        }
+
+        .section:hover .right-overlay {
+            transform: translateX(-100%);
+        }
+
+        .section .image-title {
+            position: absolute;
+            top: 10%;
+            /* ajusta la distancia al top */
+            
+            /* centra horizontalmente */
+            
+            margin: 0;
+            color: #fff;
+            /* o el color que prefieras */
+            z-index: 1;
+            /* por debajo del overlay, que usa z-index: 2 */
+
+            /* font-size responsive: mínimo 1rem, máximo 3rem, ideal 5vw */
+            font-size: clamp(1rem, 3vw, 3rem);
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+            /* opcional: mayor legibilidad */
+        }
+        .Psicologico{
+            left: 55%;
+        }
+        .Idiomas{
+            left: 10%;
+        }
+        .Empresarial{
+            left: 55%;
+        }
+        .Artistica{
+            left: 10%;
+        }
+    </style>
+</head>
+
+<body onload="this.classList.add('fade-in')">
+    <div id="nav-placeholder"></div>
+
+    <div class="sections">
+        <div class="section">
+            <img src="/assets/img/news.jpg" alt="Servicio 1">
+            <h2 class="image-title Psicologico">Acompañamiento Psicológico</h2>
+            <div class="overlay right-overlay">
+                <div class="text-block">
+                    <h5>Modalidad</h5>
+                    <p>en línea o presencial</p>
+                    <h5>Enfoque</h5>
+                    <p>para capacitación o acreditación</p>
+                </div>
+                <button>Conoce más</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="/assets/img/media.jpg" alt="Servicio 2">
+            <h2 class="image-title Idiomas">Idiomas y Comunicación</h2>
+            <div class="overlay left-overlay">
+                <div class="text-block">
+                    <h5>Modalidad</h5>
+                    <p>en línea o presencial</p>
+                    <h5>Enfoque</h5>
+                    <p>para capacitación o acreditación</p>
+                </div>
+                <button>Ver más</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="/assets/img/news.jpg" alt="Servicio 3">
+            <h2 class="image-title Empresarial">Capacitación Empresarial</h2>
+            <div class="overlay right-overlay">
+                <div class="text-block">
+                    <h5>Modalidad</h5>
+                    <p>en línea o presencial</p>
+                    <h5>Enfoque</h5>
+                    <p>para capacitación o acreditación</p>
+                </div>
+                <button>Ver más</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="/assets/img/media.jpg" alt="Servicio 4">
+            <h2 class="image-title Artistica">Formación Artística</h2>
+            <div class="overlay left-overlay">
+                <div class="text-block">
+                    <h5>Modalidad</h5>
+                    <p>en línea o presencial</p>
+                    <h5>Enfoque</h5>
+                    <p>para capacitación o acreditación</p>
+                </div>
+                <button>Ver más</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/landing.js"></script>
+    <script src="js/include.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

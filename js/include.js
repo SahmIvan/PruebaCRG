@@ -9,4 +9,5 @@ async function includeHTML(id, url) {
 window.addEventListener('DOMContentLoaded', () => {
   includeHTML('nav-placeholder', 'includes/nav.html');
   includeHTML('footer-placeholder', 'includes/footer.html');
+  includeHTML('landing-nav-placeholder', 'includes/landing_nav.html');
 });
