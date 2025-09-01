@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'Lato-Italic';
-  src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
+  font-family: 'ArapeyRegular';
+  src: url('../assets/fonts/landing/STOWE___.TTF') format('truetype');
 }
 
 
 .navbar {
   background-color: #000;
   /* center nav bar text on bootstrap */
-
+position: static;
 }
 
 .navbar-nav .nav-link {
   color: white;
-  font-family: 'Lato-Italic', sans-serif;
+  font-family: 'ArapeyRegular', sans-serif;
 }
 
 .navbar-nav .nav-link:hover {
@@ -20,5 +20,7 @@
 }
 
 .navbar-nav .nav-item {
-  margin: 0 1rem;
+  margin: 0 2rem;
+  font-size: 1.2rem;
 }
+

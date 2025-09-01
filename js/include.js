@@ -11,3 +11,4 @@ window.addEventListener('DOMContentLoaded', () => {
   includeHTML('footer-placeholder', 'includes/footer.html');
   includeHTML('landing-nav-placeholder', 'includes/landing_nav.html');
 });
+

@@ -1,0 +1,325 @@
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EthnocentricRg';
+  src: url('../assets/fonts/EthnocentricRg.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DMSans-Italic';
+  src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EssonnesTest-TextRegular';
+  src: url('../assets/fonts/EssonnesTest-TextRegular.otf') format('truetype');
+}
+
+body {
+  background-color: #f8f9fa;
+  scroll-snap-type: y proximity; /* 'proximity' es menos brusco que 'mandatory' */
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'EthnocentricRg', sans-serif;
+  text-shadow: 5px -4px 10px rgba(7, 22, 49, 0.6);
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  font-style: italic;
+  font-size: 200%;
+}
+
+h2 {
+  font-family: 'Lato-Italic', sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding-top: 2rem;
+
+}
+
+/* NOSOTROS */
+
+.crg-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crg-nosotros-row {
+  margin: 5%;
+  background-color: rgba(14,39,69, 0.03);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 15px;
+  
+  
+}
+.crg-nosotros-row2 {
+  margin: 5%;
+  background-color: rgba(14,39,69, 0.03);
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-radius: 15px;
+  
+  
+}
+/* .crg-nosotros h1 {
+  margin-bottom: 1rem;
+} */
+
+.crg-nosotros .crg-img-text {
+  height: auto;
+  width: 80%;
+  border-radius: 5%;
+  box-shadow: 
+    8px 5px 5px rgba(0,0,0,0.08),
+    -4px -4px 6px rgba(255,255,255,0.8);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.crg-nosotros p {
+  font-family: 'DMSans-Italic', sans-serif;
+  font-size: 120%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  color: #4a4a4a;
+  border-left: 4px solid rgba(49, 64, 83, 0.1); /* alpha = 0.3 */
+  padding-left: 1rem;
+}
+
+.underline-nosotros {
+  width: 50%;
+  height: 0.2%;
+  background: #D3D3D3;
+  border-radius: 2px;
+  
+}
+
+/* SERVICIOS */
+
+.crg-servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crg-servicios-row {
+  padding-top: 2%;
+}
+
+/* .crg-servicios h1 {
+  margin-bottom: 3rem;
+} */
+
+.underline-servicios {
+  width: 50%;
+  height: 0.15%;
+  background: #D3D3D3;
+  border-radius: 2px;
+  
+}
+.crg-servicios .crg-servicios-logos {
+  width: clamp(300px, 25vw, 500px);
+  height: auto;
+  margin-top: 8%;
+
+}
+
+.crg-servicios .crg-img-text {
+  height: auto;
+  width: 80%;
+  border-radius: 5%;
+  box-shadow: 
+    8px 5px 5px rgba(0,0,0,0.08),
+    -4px -4px 6px rgba(255,255,255,0.8);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.crg-servicios p {
+  font-family: 'DMSans-Italic', sans-serif;
+  font-size: 120%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  color: #4a4a4a;
+}
+
+
+/* INVERPRO */
+
+/* Hero ocupa toda la ventana */
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden
+}
+
+/* Imagen de fondo: cubre todo sin deformar */
+.hero-bg {
+  object-fit: cover;
+  object-position: center;
+  /* cubre todo el contenedor */
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: block;
+  /* elimina gaps inline */
+}
+
+.brand-overlay {
+  position: absolute;
+  top: 1rem;
+  /* tu offset vertical */
+  left: 50%;
+  /* mueve el punto de anclaje al centro */
+  transform: translateX(-50%);
+  /* centra ese punto */
+  z-index: 2;
+  /* width: 50%; */
+  /* opcional: quítalo si no lo necesitas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centra logo y texto dentro del wrapper */
+  text-align: center;
+  /* centra las líneas de texto */
+}
+
+
+.brand-overlay img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.brand-overlay .brand-text {
+  margin-left: 25%;
+  color: #fff;
+  font-family: 'EssonnesTest-TextRegular', sans-serif;
+  font-size: 120%;
+  white-space: normal;
+  z-index: 3;
+  color: #0e2745;
+  font-style: italic;
+}
+
+/* Ajustes móviles */
+@media (max-width: 915px) {
+  .brand-overlay {
+    width: 100%;
+    padding-top: 5rem;
+  }
+
+  .brand-overlay .brand-text {
+    font-size: 4vw;
+  }
+}
+
+/* Imagenes con texto INVERPRO */
+.crg-inverpro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.crg-inverpro-row {
+  padding-top: 2%;
+  
+}
+
+.crg-inverpro h1 {
+  margin-bottom: 3rem;
+}
+
+.crg-inverpro .crg-inverpro-logos {
+  width: clamp(300px, 25vw, 500px);
+  height: auto;
+  margin-top: 5%;
+
+}
+
+.crg-inverpro .crg-img-text {
+  height: auto;
+  width: 80%;
+  border-radius: 5%;
+  box-shadow: 
+    8px 5px 5px rgba(0,0,0,0.08),
+    -4px -4px 6px rgba(255,255,255,0.8);
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.crg-inverpro p {
+  font-family: 'DMSans-Italic', sans-serif;
+  font-size: 150%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  border-left: 4px solid rgba(14,39,69,0.3);
+  padding-left: 1rem;
+}
+
+
+
+/* OFERTA */
+/* Tipografía del título */
+#oferta-comercial h1 {
+  font-family: 'EthnocentricRg', sans-serif;
+  font-size: 250%;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 10px rgba(7, 22, 49, 0.6);
+  padding-top: 4rem;
+  font-style: italic;
+
+}
+
+/* Texto principal */
+#oferta-comercial p.lead {
+  font-family: 'DMSans-Italic', sans-serif;
+  color: #4a4a4a;
+  padding: 5% 5%;
+  
+}
+
+/* Espaciado y sombras en cards */
+#oferta-comercial .card {
+  border-radius: 0.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#oferta-comercial .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones transparentes pero definidos */
+#oferta-comercial .btn-outline-primary {
+  border-width: 2px;
+}
