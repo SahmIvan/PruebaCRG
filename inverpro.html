@@ -1,268 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Robles Group</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+</head>
+
 <body>
 
     <!-- Navbar -->
     <div id="nav-placeholder"></div>
 
-    <style>
-        @font-face {
-            font-family: 'STOWE___';
-            src: url('assets/fonts/landing/STOWE___.TTF') format('truetype');
-        }
 
-        @font-face {
-            font-family: 'STOWE__I';
-            src: url('assets/fonts/landing/STOWE__I.TTF') format('truetype');
-        }
+    <header class="hero-image position-relative overflow-hidden">
+        <!-- Hero background -->
+        <img src="./assets/img/fondo_inverpro.jpg" alt="Fondo hero"
+            class="hero-bg position-absolute top-0 start-0 w-100 h-100">
+        <!-- Logo superpuesto -->
+        <div class="brand-overlay">
+            <img src="assets/img/CRG_Inverpro_Logo.png" alt="CRG Logo">
+            <div class="brand-text">El Hogar de tu siguiente gran Proyecto</div>
+        </div>
+        </section>
+    </header>
 
-        @font-face {
-            font-family: 'ArapeyRegular';
-            src: url('assets/fonts/landing/ArapeyRegular-X2Md.ttf') format('truetype');
-        }
+    <main>
+        <section>
+            <div class="container text-center justify-content-center crg-inverpro">
+                <div class="row ">
+                    <div class="col-12 text-center">
+                        <img src="assets/img/CRG_Inverpro_Logo.png" class="crg-inverpro-logos" alt="CRG_Inverpro_Logo">
 
-        /* Reset / Global */
-        body {
-            margin: 0;
-            background: #ffffff;
-            color: #111;
-            font-family: 'ArapeyRegular', 'STOWE__I', serif;
-        }
+                        <!-- Inverpro -->
 
-        /* Layout principal */
-        .hero-row {
-            min-height: 100vh;
-            display: flex;
-            flex-wrap: nowrap;
-        }
 
-        .left-col {
-            background: #ffffff;
-            padding: clamp(2rem, 4vw, 6rem);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+                        <div class="row crg-inverpro-row " data-aos="fade-up">
 
-        .right-col {
-            padding: 0;
-            min-height: 100vh;
-        }
-
-        .right-col img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(20%);
-        }
-
-        /* Logo y subtítulo */
-        .brand {
-            display: block;
-            margin: 0 auto 0.4rem auto;
-            max-width: 380px;
-            width: 60%;
-        }
-
-        .subtitle {
-            font-family: 'ArapeyRegular', serif;
-            text-align: center;
-            color: #333;
-            margin-bottom: 2.4rem;
-            font-size: clamp(1rem, 1.6vw, 1.4rem);
-        }
-
-        /* Columnas de texto estilizadas */
-        .text-column {
-            width: 100%;
-            color: #111;
-            font-size: clamp(0.95rem, 1.08vw, 1.15rem);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            font-family: 'STOWE__I', serif;
-        }
-
-        .text-block {
-            margin-bottom: 2.6rem;
-            text-indent: 1rem;
-        }
-
-        .text-left {
-            width: 62%;
-            text-align: justify;
-        }
-
-        .text-right {
-            width: 60%;
-            margin-top: 2rem;
-            text-align: right;
-            margin-left: auto;
-        }
-
-        .text-center {
-            width: 58%;
-            margin-top: 2rem;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* párrafo remarcado color azul (como en la imagen) */
-        .highlight {
-
-            padding: 0.6rem 0.8rem;
-            display: inline-block;
-            border-radius: 2px;
-        }
-
-        /* sección inferior con íconos */
-        .bottom-row {
-
-            /* se pega al pie de la columna izquierda */
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-
-            padding-bottom: 2rem;
-        }
-
-        .icon {
-            width: 72px;
-            height: 72px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .icon svg {
-            width: 56px;
-            height: 56px;
-            fill: #000;
-        }
-
-        .bottom-text {
-            flex: 1;
-            font-size: clamp(0.95rem, 1.04vw, 1.05rem);
-            line-height: 1.6;
-            text-align: right;
-            max-width: 50%;
-            margin-left: auto;
-            font-family: 'STOWE__I', serif;
-            color: #111;
-        }
-
-        /* Responsive tweaks */
-        @media (max-width: 991.98px) {
-            .hero-row {
-                flex-wrap: wrap;
-            }
-
-            .right-col,
-            .left-col {
-                width: 100%;
-                min-height: auto;
-            }
-
-            .right-col img {
-                height: 50vh;
-            }
-
-            .text-left,
-            .text-right,
-            .text-center {
-                width: 100%;
-                text-align: left;
-                margin: 0 0 1rem 0;
-            }
-
-            .bottom-text {
-                text-align: left;
-                max-width: 100%;
-            }
-
-            .brand {
-                width: 48%;
-            }
-        }
-    </style>
-    </head>
-
-    <body>
-
-        <main>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-9 col-12 left-col">
-
-                        <img src="./assets/img/landing/CRG_PROYECTOS_Full.png" alt="CasaRobles Logo" class="brand">
-
-                        <div class="subtitle">
-                            CasaRobles Proyectos es el corazón humano de CasaRobles Group
-                        </div>
-
-                        <div class="text-column">
-
-                            <!-- párrafo resaltado (como la zona azul de la imagen) -->
-                            <p class="text-block text-left">
-
-                                Nos dedicamos a la producción académica, la difusión cultural y el desarrollo humano
-                                y
-                                comunitario buscando
-                                impactar positivamente y promover el crecimiento integral de individuos y
-                                comunidades.
-
-                            </p>
-                        </div>
-
-                        <!-- fila inferior: íconos a la izquierda y texto a la derecha -->
-                        <div class="bottom-row">
-                            <!-- iconos -->
-                            <div style="display:flex; gap:1.2rem; align-items:center;">
-                                <div class="icon" aria-hidden="true">
-                                    <img src="./assets/img/paginas/proyectos-icono-pin.png" alt="">
-                                </div>
-
-                                <div class="icon" aria-hidden="true">
-                                    <img src="./assets/img/paginas/proyectos-icono-monitor.png" alt="">
-                                </div>
+                            <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                                <img src="assets/img/busines.jpg" alt="media" class="img-fluid crg-img-text">
                             </div>
-
-                            <!-- texto explicativo alineado a la derecha -->
-                            <div class="bottom-text">
-                                Nuestros profesionales alcanzan individuos y comunidades directamente en León Gto.,
-                                México, o
-                                desde la
-                                virtualidad a través de una red de profesionales en línea.
+                            <div class="col-md-6 d-flex text-center align-items-center">
+                                <p>Permítenos apoyar tu negocio.</p>
                             </div>
                         </div>
+
+                        <!-- Plataforma News -->
+                        <div class="row " data-aos="fade-up">
+                            <div class="col-md-6 d-flex text-center align-items-center">
+                                <p>Tenemos planes de financiamiento accesibles y
+                                    directos para impulsar tu micro, pequeño o
+                                    mediano emprendimiento.</p>
+                            </div>
+                            <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                                <img src="assets/img/financing.jpg" alt="media" class="crg-img-text img-fluid d-flex">
+                            </div>
+
+                        </div>
+
+                        <!-- CENFI -->
+
+
+                        <div class="row " data-aos="fade-up">
+
+                            <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                                <img src="assets/img/social_media.jpg" alt="media" class="img-fluid crg-img-text">
+                            </div>
+                            <div class="col-md-6 d-flex text-center align-items-center">
+                                <p>Promociónate en nuestros sitios y en nuestras
+                                    redes sociales. Somos una gran comunidad en
+                                    crecimiento. Conoce más.</p>
+                            </div>
+                        </div>
+
                     </div>
-
-
-                    <div class="col-lg-3 col-12 crg-Nuestra-Hisotira-hero-right">
-                        <img src="./assets/img/paginas/proyectos-lectura.jpg" alt="">
-                    </div>
-
                 </div>
-            </div>
-        </main>
+        </section>
+    </main>
 
-        <!-- Optional: incluir script de Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+
+
+
+
+
+
 
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+
+
     <!-- Scripts -->
+
     <script src="js/include.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Animaciones -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 600, once: true });
-  </script>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 600, once: true });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
 </body>
 
