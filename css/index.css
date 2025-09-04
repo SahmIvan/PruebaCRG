@@ -1,22 +1,30 @@
 @font-face {
-  font-family: 'Lato-Italic';
-  src: url('../assets/fonts/Lato-Italic.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'EthnocentricRg';
-  src: url('../assets/fonts/EthnocentricRg.otf') format('truetype');
+  src: url('../assets/fonts/landing/EthnocentricRg.otf') format('truetype');
+}
+@font-face {
+  font-family: 'STOWE___';
+  src: url('../assets/fonts/landing/STOWE___.TTF') format('truetype');
+}
+
+/* Nosotros P,  */
+@font-face {
+  font-family: 'STOWE__I';
+  src: url('../assets/fonts/landing/STOWE__I.TTF') format('truetype');
 }
 
 @font-face {
-  font-family: 'DMSans-Italic';
-  src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-family: 'ArapeyItalic';
+  src: url('../assets/fonts/landing/ArapeyItalic-LwGZ.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'EssonnesTest-TextRegular';
-  src: url('../assets/fonts/EssonnesTest-TextRegular.otf') format('truetype');
+  font-family: 'ArapeyRegular';
+  src: url('../assets/fonts/landing/ArapeyRegular-X2Md.ttf') format('truetype');
 }
+
+
+
 
 body,
 html {
@@ -28,7 +36,7 @@ html {
 /* crg-> Prefijo para identificar estilos propios de Casa Robles Group y evitar colisiones con los de Bootstrap */
 .crg-title {
   color: #fff;
-  font-family: 'EssonnesTest-TextRegular',
+  font-family: 'ArapeyItalic',
     sans-serif;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -37,8 +45,9 @@ html {
 
 .crg-text {
   color: #fff;
-  font-family: 'Lato-Italic';
-  font-size: 200%;
+  font-family: 'EthnocentricRg',
+    sans-serif;
+  font-size: 180%;
   margin-bottom: 1.5rem;
   margin-top: 2.9rem;
 }
@@ -49,6 +58,7 @@ html {
   background: transparent;
   color: #fff;
   font-family: sans-serif;
+  font-weight: bold;
 }
 
 .btn-crg:hover {
