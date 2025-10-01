@@ -1,19 +1,23 @@
 @font-face {
   font-family: 'ArapeyItalic';
   src: url('../assets/fonts/landing/ArapeyItalic-LwGZ.ttf') format('truetype');
+  font-display: swap
 }
 
 @font-face {
   font-family: 'ArapeyRegular';
   src: url('../assets/fonts/landing/ArapeyRegular-X2Md.ttf') format('truetype');
+  font-display: swap
 }
 @font-face {
   font-family: 'STOWE___';
   src: url('../assets/fonts/landing/STOWE___.TTF') format('truetype');
+  font-display: swap
 }
 @font-face {
   font-family: 'STOWE__I';
   src: url('../assets/fonts/landing/STOWE__I.TTF') format('truetype');
+  font-display: swap
 }
 h1 {
   font-family: 'STOWE___', sans-serif;

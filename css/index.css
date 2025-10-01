@@ -51,6 +51,7 @@ html {
   margin-bottom: 1.5rem;
   margin-top: 2.9rem;
 }
+/* Ajustes móviles */
 
 .btn-crg {
   padding: .75rem 1.5rem;
@@ -74,15 +75,15 @@ html {
 
 /* Indentaciones responsivas en text-block */
 .text-block p:nth-of-type(1) {
-  margin-left: 15%;
+  margin-left: 7vw;
 }
 
 .text-block p:nth-of-type(2) {
-  margin-left: 25%;
+  margin-left: 12vw;
 }
 
 .text-block p:nth-of-type(3) {
-  margin-left: 35%;
+  margin-left: 16vw;
 }
 
 body {
@@ -97,3 +98,11 @@ body.fade-out {
 a.btn-crg {
   cursor: pointer !important;
 }
+@media (max-width: 915px) {
+  .crg-text {
+    font-size: 7vw;
+  }
+
+  
+}
+
